@@ -1,5 +1,3 @@
-# MorseCrypto-Tool
-
 # MorseCrypto Tool
 
 **MorseCrypto Tool** is a Python-based application that combines Morse code conversion with AES encryption and decryption functionalities. This tool is designed to provide users with a practical means of secure text handling and encoding.
