@@ -45,15 +45,11 @@
     Decrypted message: SECRET
     ```
 
-## Morse Code Conversion
+
 
 ### Morse Code Table
 
-## Morse Code Conversion
-
-### Morse Code Table
-
-Here's a compact and easy-to-copy table of Morse code for each letter and digit:
+Here's a easy-to-copy table of Morse code for each letter and digit:
 
 | **Character** | **Morse Code** |
 |:--------------|:---------------|
