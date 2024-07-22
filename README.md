@@ -14,8 +14,3 @@
   - Encrypt and decrypt text using AES (Advanced Encryption Standard).
   - Base64 encoding is used for displaying encrypted messages.
 
-## Installation
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/yourusername/MorseCrypto-Tool.git
