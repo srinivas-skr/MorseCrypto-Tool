@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryption and Morse Code Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Encryption and Morse Code Converter</h1>
+
+        <form action="/encrypt" method="post">
+            <h2>Encrypt Text</h2>
+            <textarea name="text" rows="4" placeholder="Enter text to encrypt"></textarea><br>
+            <input type="submit" value="Encrypt">
+        </form>
+
+        <form action="/decrypt" method="post">
+            <h2>Decrypt Text</h2>
+            <input type="text" name="iv" placeholder="Enter IV"><br>
+            <input type="text" name="ciphertext" placeholder="Enter Ciphertext"><br>
+            <input type="submit" value="Decrypt">
+        </form>
+
+        <form action="/morse" method="post">
+            <h2>Convert Text to Morse Code</h2>
+            <textarea name="text" rows="4" placeholder="Enter text to convert"></textarea><br>
+            <input type="submit" value="Convert to Morse Code">
+        </form>
+
+        <form action="/from_morse" method="post">
+            <h2>Convert Morse Code to Text</h2>
+            <textarea name="morse" rows="4" placeholder="Enter Morse code to convert"></textarea><br>
+            <input type="submit" value="Convert to Text">
+        </form>
+
+        {% if iv and ciphertext %}
+        <h2>Encryption Result</h2>
+        <p>IV: {{ iv }}</p>
+        <p>Ciphertext: {{ ciphertext }}</p>
+        {% endif %}
+
+        {% if plaintext %}
+        <h2>Decryption Result</h2>
+        <p>Plaintext: {{ plaintext }}</p>
+        {% endif %}
+
+        {% if morse %}
+        <h2>Morse Code Result</h2>
+        <p>Morse Code: {{ morse }}</p>
+        {% endif %}
+
+        {% if text %}
+        <h2>Text Result</h2>
+        <p>Text: {{ text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
